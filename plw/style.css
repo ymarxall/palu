@@ -7,20 +7,22 @@ body {
 
   margin: 0;
   padding: 0;
+  display: flex;
+    flex-direction: column;
+
 }
 
 h2,
 h3 {
-  color: #00a2c6;
+  color: #E65C19;
 }
 
 footer {
-  padding: 20px;
-  color: white;
-
-
-  text-align: center;
-  font-weight: bold;
+  background-color: #E65C19;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
 nav a {
@@ -42,10 +44,10 @@ nav a:hover {
 
 .featured-image {
   width: 100%;
-  max-height: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
 
-  object-fit: cover;
-  object-position: center;
 }
 
 .profile img {
@@ -53,17 +55,17 @@ nav a:hover {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
 
-  padding: 20px;
-  margin-top: 20px;
 }
 
 .jumbotron {
   font-size: 20px;
   padding: 60px;
-  background-color: #00c8eb;
+  background-color: #E65C19;
   text-align: center;
   color: white;
 }
@@ -82,7 +84,7 @@ nav li {
 
  
 nav {
-  background-color: #00a2c6;
+  background-color: #E65C19;
   padding: 5px;
 
   position: sticky;
@@ -90,7 +92,8 @@ nav {
 }
  
 main {
-  padding: 20px;
+  flex: 1; /* Mengisi ruang yang tersedia */
+    padding: 20px;
  
   /* overflow: auto; */
 }
@@ -100,11 +103,31 @@ main {
   width: 75%;
 }
  
-aside {
-  float: right;
-  width: 25%;
- 
-  padding-left: 20px;
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;  /* Center text */
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  .profile header, .profile section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile img {
+    width: 200px;
+    margin-bottom: 20px; /* Memberikan sedikit jarak antara gambar dan teks */
+  }
+  
+  .profile table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
 }
 
 header {
